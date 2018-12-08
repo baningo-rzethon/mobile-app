@@ -1,0 +1,24 @@
+{
+	"time": "Sat Dec 08 2018 17:17:11 GMT+0100 (CET)",
+	"nativePlatformStatus": "1",
+	"bundle": false,
+	"release": false,
+	"changesRequireBuild": false,
+	"projectFileHash": "f73ce2681b75c0c5ad2b4ba298d4de6cf04c51190708d636642efc62f92bd87a",
+	"changesRequireBuildTime": "Sat Dec 08 2018 17:01:56 GMT+0100 (CET)",
+	"appFilesHashes": {
+		"/home/simon/IdeaProjects/rzethon2018/app/LICENSE": "7ba7946732cf86c068c159fb1d1b83fc45642fa0",
+		"/home/simon/IdeaProjects/rzethon2018/app/README.md": "6f7913e82dd1f42672c64916972055852231c968",
+		"/home/simon/IdeaProjects/rzethon2018/app/app.css": "66f5e39b0d81ec7d0ea7dad8ecb79bd12150c329",
+		"/home/simon/IdeaProjects/rzethon2018/app/components/App.js": "c9e6d4019f091e7f47eff6aba5063ba8ba761167",
+		"/home/simon/IdeaProjects/rzethon2018/app/components/Counter.js": "dd064629d5245462e69050ca2d005cf8f3b95657",
+		"/home/simon/IdeaProjects/rzethon2018/app/components/Map.js": "1aa5d7e949c62a86d81d1008b9f5833275858650",
+		"/home/simon/IdeaProjects/rzethon2018/app/components/parts/UserBarCode.js": "94e96bab593e66b328805b53312149a7689cdea4",
+		"/home/simon/IdeaProjects/rzethon2018/app/components/views/MainScreen.js": "f0f508c251f6080257e33b493c355183baa7f602",
+		"/home/simon/IdeaProjects/rzethon2018/app/images/NativeScript-Vue.png": "31f09bdba72293198ee2e2a83c4fe5aa5744bc3d",
+		"/home/simon/IdeaProjects/rzethon2018/app/images/Rzeszow_logo.svg.png": "203c8aaba98c64643038a2bb7b1e36d8400f5183",
+		"/home/simon/IdeaProjects/rzethon2018/app/main.js": "31eca168483cc002a464fca7d79a133ca12674e9",
+		"/home/simon/IdeaProjects/rzethon2018/app/package.json": "e3e5a618431900fcff70be7beea7405d753a5274",
+		"/home/simon/IdeaProjects/rzethon2018/app/images/BarCodeExample.jpg": "865ef0f04895ef56af6d41aa3245f3981f8723ea"
+	}
+}
