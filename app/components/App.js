@@ -50,7 +50,7 @@ module.exports = {
             }).then(result => {
                 console.log(result);
                 httpModule.request({
-                    url: "https://rzethon.shymi.eu/APIOauth/login",
+                    url: "https://rzethon.shymi.eu/APIOAuth/login",
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

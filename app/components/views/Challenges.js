@@ -26,7 +26,7 @@ module.exports = {
         <GridLayout columns="50, auto, *, auto, auto" rows="auto">
            <Image src="~/images/Rzeszow_logo.svg.png" height="40" row="0" col="0" />
            <Label text="Wyzwania" fontSize="24" row="0" col="1"/>
-           <Image @tap="alert('todo')" src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" />
+           <Image src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" />
            <Image @tap="showBarCode()" src="~/images/iconBarCodes1.svg.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" />
         </GridLayout>
       </ActionBar>
