@@ -1,6 +1,7 @@
 const Map = require('./../Map');
 const Preferences = require('./Preferences');
 const Challenges = require('./Challenges');
+const Prizes = require('./Prizes');
 
 module.exports = {
     data() {
@@ -17,7 +18,7 @@ module.exports = {
             <Image src="~/images/iconStar.svg.png" height="100" col="1" row="0" class="m-b-10" />
             <Label col="1" row="1" class="text-center h3">Preferencje</Label>
         </StackLayout>
-        <StackLayout @tap="goToPreferences()" row="1" col="0" class="btn">
+        <StackLayout @tap="goToPrizes()" row="1" col="0" class="btn">
             <Image src="~/images/iconPrize.svg.png" height="100" col="1" row="2" class="m-b-10" />
             <Label col="0" row="3" class="text-center h3">Nagrody</Label>
         </StackLayout>
@@ -29,6 +30,9 @@ module.exports = {
         },
         goToPreferences() {
             this.$navigateTo(Preferences);
+        },
+        goToPrizes() {
+            this.$navigateTo(Prizes);
         },
     }
 };
