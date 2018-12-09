@@ -1,4 +1,5 @@
 const App = require('./../App');
+const ChallengeDetails = require('./../parts/ChallengeDetails');
 
 module.exports = {
     data() {
@@ -6,11 +7,15 @@ module.exports = {
             challenges: [
                 {
                     id: 1,
-                    name: 'Lorem ipsum'
+                    name: 'Lorem ipsum',
+                    timeLimit: 360,
+                    description: ' Nam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
                 },
                 {
                     id: 2,
-                    name: 'Dolor sit'
+                    name: 'Dolor sit',
+                    timeLimit: 360,
+                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
                 },
             ]
         };
@@ -20,18 +25,18 @@ module.exports = {
       <ActionBar class="action-bar" title="RzeTour">
         <GridLayout columns="50, auto, *, auto, auto" rows="auto">
            <Image src="~/images/Rzeszow_logo.svg.png" height="40" row="0" col="0" />
-           <Label text="RzeTour" fontSize="24" row="0" col="1"/>
-           <Image @tap="alert('todo')" src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" v-show="loggedIn" />
-           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" v-show="loggedIn" />
+           <Label text="Wyzwania" fontSize="24" row="0" col="1"/>
+           <Image @tap="alert('todo')" src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" />
+           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.svg.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" />
         </GridLayout>
       </ActionBar>
       
       <ScrollView>
         <ListView for="challenge in challenges">
           <v-template>
-            <GridLayout columns="*, auto, *" rows="60">
-              <Label :text="challenge.name" class="h3" row="0" col="0" verticalAlignment="center" />
-              <Button row="0" col="2">Rozpocznij</Button>
+            <GridLayout columns="auto, *, auto" rows="60">
+              <Label :text="challenge.name" class="h3 m-l-20" row="0" col="0" verticalAlignment="center" />
+              <Image @tap="showChallenge(challenge)" src="~/images/iconPlus.svg.png" height="25" row="0" col="2" class="m-r-20"/>
             </GridLayout>
           </v-template>
         </ListView>
@@ -39,11 +44,15 @@ module.exports = {
     </Page>
   `,
     mounted() {
-        //TODO request api
+        //TODO request apis
     },
     methods: {
         goHome() {
             this.$navigateTo(App);
+        },
+        showChallenge(challenge) {
+            this.$showModal(ChallengeDetails, { props: { challenge }})
+                .then(data => console.log(data));
         }
     }
 };

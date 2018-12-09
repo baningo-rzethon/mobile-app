@@ -36,9 +36,9 @@ module.exports = {
       <ActionBar class="action-bar" title="RzeTour">
         <GridLayout columns="50, auto, *, auto, auto" rows="auto">
            <Image src="~/images/Rzeszow_logo.svg.png" height="40" row="0" col="0" />
-           <Label text="RzeTour" fontSize="24" row="0" col="1" verticalAlignment="center" />
-           <Image @tap="alert('todo')" src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" v-show="loggedIn" />
-           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" v-show="loggedIn" />
+           <Label text="Preferencje" fontSize="24" row="0" col="1"/>
+           <Image @tap="alert('todo')" src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" />
+           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.svg.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" />
         </GridLayout>
       </ActionBar>
       
@@ -46,8 +46,8 @@ module.exports = {
         <ListView for="thing in things">
           <v-template>
             <GridLayout columns="*, *" rows="60">
-              <Label :text="thing.name" class="h3" row="0" col="0" />
-              <Switch v-model="thing.tak" row="0" col="1" />
+              <Label :text="thing.name" class="h3 m-l-20" row="0" col="0" verticalAlignment="center" />
+              <Switch v-model="thing.tak" row="0" col="1" class="m-r-20"/>
             </GridLayout>
           </v-template>
         </ListView>
