@@ -11,10 +11,11 @@ module.exports = {
     template: `
     <Page class="page">
       <ActionBar class="action-bar" title="RzeTour">
-        <GridLayout columns="50, auto, *, auto" rows="auto">
+        <GridLayout columns="50, auto, *, auto, auto" rows="auto">
            <Image src="~/images/Rzeszow_logo.svg.png" height="40" row="0" col="0" />
            <Label text="RzeTour" fontSize="24" row="0" col="1"/>
-           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" v-show="loggedIn" />
+           <Image @tap="alert('todo')" src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" v-show="loggedIn" />
+           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.svg.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" v-show="loggedIn" />
         </GridLayout>
       </ActionBar>
       

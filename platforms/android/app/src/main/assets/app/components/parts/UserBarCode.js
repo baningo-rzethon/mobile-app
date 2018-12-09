@@ -10,7 +10,7 @@ module.exports = {
     template: `
     <Page>
         <StackLayout>
-          <Label class="p-20 h1 text-center" text="Twój kod"/>
+          <Label class="p-20 h2 font-weight-bold text-center" text="TWÓJ KOD"/>
           <Image class="m-20" src="~/images/BarCodeExample.jpg"/>
         </StackLayout>
     </Page>
