@@ -8,8 +8,8 @@ module.exports = {
             prizes: [
                 {
                     id: 1,
-                    name: 'Talon',
-                    description: 'Na balon'
+                    name: 'Kupon',
+                    description: 'Pizza 20% taniej'
                 },
             ]
         };
@@ -20,7 +20,7 @@ module.exports = {
         <GridLayout columns="50, auto, *, auto, auto" rows="auto">
            <Image src="~/images/iconPrize.svg.png" height="40" row="0" col="0" />
            <Label text="Zdobyte nagrody" fontSize="24" row="0" col="1"/>
-           <Image src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" />
+           <Image src="~/images/iconQr.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" />
            <Image @tap="showBarCode()" src="~/images/iconBarCodes1.svg.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" />
         </GridLayout>
       </ActionBar>

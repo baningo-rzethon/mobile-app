@@ -1,11 +1,15 @@
 const MainScreen = require('./views/MainScreen');
 const UserBarCode = require('./parts/UserBarCode');
+const GoogleMaps = require('./parts/GoogleMaps');
+const Qr = require('./parts/Qr');
 const httpModule = require('http');
 
 module.exports = {
+    props: ['challenge'],
     data() {
         return {
             loggedIn: false,
+            inProgress: true,
         };
     },
     template: `
@@ -14,8 +18,8 @@ module.exports = {
         <GridLayout columns="50, auto, *, auto, auto" rows="auto">
            <Image src="~/images/Rzeszow_logo.svg.png" height="40" row="0" col="0" />
            <Label text="RzeTour" fontSize="24" row="0" col="1"/>
-           <Image @tap="alert('todo')" src="~/images/iconGears.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" v-show="loggedIn" />
-           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.svg.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4" v-show="loggedIn" />
+           <Image @tap="showQr()" src="~/images/iconQr.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="3" v-show="loggedIn" v-show="inProgress" />
+           <Image @tap="showBarCode()" src="~/images/iconBarCodes1.svg.png" height="40" style="opacity: 0.6; margin-right: 50px" row="0" col="4"/>
         </GridLayout>
       </ActionBar>
       
@@ -27,6 +31,11 @@ module.exports = {
             <Button @tap="showRegisterForm()" class="btn" text="Rejestracja" />
         </StackLayout>
         <StackLayout v-else>
+            <GridLayout columns="auto, *, auto" rows="*, *" class="p-x-20 p-t-10" style="background-color: rgb(47,82,160)">
+                <Label col="0" row="0" text="W TRAKCIE" class="h5" style="color: #fff"/>
+                <Label col="0" row="1" text="Spacer 3-Maja" class="h2" style="color: #fff"/>
+                <Image src="~/images/iconMaps.png" col="2" row="1" height="40" @tap="showMap()"/>
+            </GridLayout>
             <MainScreen />
         </StackLayout>
       </ScrollView>
@@ -37,6 +46,9 @@ module.exports = {
         UserBarCode
     },
     methods: {
+        markDone() {
+            //POST done
+        },
         showLoginForm() {
             login({
                 title: "Logowanie",
@@ -113,6 +125,15 @@ module.exports = {
         },
         showBarCode() {
             this.$showModal(UserBarCode)
+        },
+        showMap() {
+            this.$showModal(GoogleMaps);
+        },
+        showQr() {
+            this.$showModal(Qr)
+                .then(data => {
+                    alert(data);
+                });
         },
         mounted() {
             console.log('Montowanie App');

@@ -1,3 +1,4 @@
+const App = require('./../App');
 module.exports = {
     props: ['challenge'],
     data() {
@@ -16,4 +17,9 @@ module.exports = {
         </StackLayout>
     </Page>
   `,
+    methods: {
+        goHome() {
+            this.$navigateTo(App);
+        }
+    }
 };
