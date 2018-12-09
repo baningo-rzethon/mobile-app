@@ -5,13 +5,13 @@ module.exports = {
         };
     },
     computed: {
-        
+        //TODO barcode
     },
     template: `
     <Page>
         <StackLayout>
-          <Image class="m-20" src="~/images/BarCodeExample.jpg"/>
           <Label class="p-20 h1 text-center" text="Twój kod"/>
+          <Image class="m-20" src="~/images/BarCodeExample.jpg"/>
         </StackLayout>
     </Page>
   `,
