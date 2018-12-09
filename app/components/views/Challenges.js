@@ -8,74 +8,14 @@ module.exports = {
             challenges: [
                 {
                     id: 1,
-                    name: 'Lorem ipsum',
+                    name: 'Spacer 3-Maja',
                     timeLimit: '3h00m',
-                    description: ' Nam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
+                    description: 'Nam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
                 },
                 {
                     id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
-                    description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
-                },
-                {
-                    id: 2,
-                    name: 'Dolor sit',
-                    timeLimit: '6h00m',
+                    name: 'Lorem ipsum',
+                    timeLimit: '4h00m',
                     description: 'Wam laoreet libero non quam elementum, ac dapibus est ultricies. Vestibulum facilisis, elit nec blandit imperdiet, purus erat scelerisque erat, sed rutrum augue massa vel nisl.'
                 },
             ]

@@ -11,7 +11,7 @@ module.exports = {
                     things: [
                         {
                             id: 1,
-                            name: 'Pizzeria',
+                            name: 'Sałatka',
                             category: 1,
                             tak: false,
                         },
@@ -21,26 +21,93 @@ module.exports = {
                             category: 1,
                             tak: false,
                         },
-                    ]
-                },
-                {
-                    id: 2,
-                    name: 'Zakupy',
-                    things: []
-                },
-                {
-                    id: 3,
-                    name: 'Zwiedzanie',
-                    things: [
                         {
                             id: 3,
-                            name: 'Zamek',
-                            category: 3,
+                            name: 'Pizza',
+                            category: 1,
                             tak: false,
                         },
                         {
                             id: 4,
-                            name: 'Pomnik',
+                            name: 'Burgery',
+                            category: 1,
+                            tak: false,
+                        },
+                        {
+                            id: 5,
+                            name: 'Domowe',
+                            category: 1,
+                            tak: false,
+                        },
+                    ]
+                },
+                {
+                    id: 2,
+                    name: 'Zwiedzanie',
+                    things: [
+                        {
+                            id: 6,
+                            name: 'Stare budowle',
+                            category: 2,
+                            tak: false,
+                        },
+                        {
+                            id: 7,
+                            name: 'Budynki miasta',
+                            category: 2,
+                            tak: false,
+                        },
+                        {
+                            id: 8,
+                            name: 'Parki',
+                            category: 2,
+                            tak: false,
+                        },
+                        {
+                            id: 9,
+                            name: 'Pomniki',
+                            category: 2,
+                            tak: false,
+                        },
+                        {
+                            id: 10,
+                            name: 'Muzea',
+                            category: 2,
+                            tak: false,
+                        },
+                    ]
+                },
+                {
+                    id: 3,
+                    name: 'Rozrywka',
+                    things: [
+                        {
+                            id: 11,
+                            name: 'Kluby',
+                            category: 3,
+                            tak: false,
+                        },
+                        {
+                            id: 12,
+                            name: 'Puby',
+                            category: 3,
+                            tak: false,
+                        },
+                        {
+                            id: 13,
+                            name: 'Kawiarnie',
+                            category: 3,
+                            tak: false,
+                        },
+                        {
+                            id: 14,
+                            name: 'Kina',
+                            category: 3,
+                            tak: false,
+                        },
+                        {
+                            id: 15,
+                            name: 'Teatry',
                             category: 3,
                             tak: false,
                         },
@@ -48,36 +115,41 @@ module.exports = {
                 },
                 {
                     id: 4,
-                    name: 'Komunikacja',
-                    things: []
-                }
+                    name: 'Zakupy',
+                    things: [
+                        {
+                            id: 16,
+                            name: 'Galeria',
+                            category: 4,
+                            tak: false,
+                        },
+                        {
+                            id: 17,
+                            name: 'Centra handlowe',
+                            category: 4,
+                            tak: false,
+                        },
+                        {
+                            id: 18,
+                            name: 'Hipermarkety',
+                            category: 4,
+                            tak: false,
+                        },
+                        {
+                            id: 19,
+                            name: 'Spożywcze',
+                            category: 4,
+                            tak: false,
+                        },
+                        {
+                            id: 20,
+                            name: 'Monopolowe',
+                            category: 4,
+                            tak: false,
+                        },
+                    ]
+                },
             ],
-            things: [
-                {
-                    id: 1,
-                    name: 'Pizzeria',
-                    category: 1,
-                    tak: false,
-                },
-                {
-                    id: 2,
-                    name: 'Kebab',
-                    category: 1,
-                    tak: false,
-                },
-                {
-                    id: 3,
-                    name: 'Zamek',
-                    category: 3,
-                    tak: false,
-                },
-                {
-                    id: 4,
-                    name: 'Pomnik',
-                    category: 3,
-                    tak: false,
-                },
-            ]
         };
     },
     template: `
@@ -92,7 +164,7 @@ module.exports = {
       </ActionBar>
 
         <TabView>
-          <TabViewItem title="Gastronomia">
+          <TabViewItem :title="categories[0].name">
             <GridLayout columns="*" rows="*">
                 <ListView for="thing in categories[0].things" row="0" col="0">
                   <v-template>
@@ -104,8 +176,41 @@ module.exports = {
                 </ListView>
             </GridLayout>
           </TabViewItem>
-          <TabViewItem title="Zwiedzanie">
-            <Label text="Label in Tab 2" />
+          <TabViewItem :title="categories[1].name">
+            <GridLayout columns="*" rows="*">
+                <ListView for="thing in categories[1].things" row="0" col="0">
+                  <v-template>
+                    <GridLayout columns="*, *" rows="60">
+                      <Label :text="thing.name" class="h3 m-l-20" row="0" col="0" verticalAlignment="center" />
+                      <Switch v-model="thing.tak" row="0" col="1" class="m-r-20"/>
+                    </GridLayout>
+                  </v-template>
+                </ListView>
+            </GridLayout>
+          </TabViewItem>
+          <TabViewItem :title="categories[2].name">
+            <GridLayout columns="*" rows="*">
+                <ListView for="thing in categories[2].things" row="0" col="0">
+                  <v-template>
+                    <GridLayout columns="*, *" rows="60">
+                      <Label :text="thing.name" class="h3 m-l-20" row="0" col="0" verticalAlignment="center" />
+                      <Switch v-model="thing.tak" row="0" col="1" class="m-r-20"/>
+                    </GridLayout>
+                  </v-template>
+                </ListView>
+            </GridLayout>
+          </TabViewItem>
+          <TabViewItem :title="categories[3].name">
+            <GridLayout columns="*" rows="*">
+                <ListView for="thing in categories[3].things" row="0" col="0">
+                  <v-template>
+                    <GridLayout columns="*, *" rows="60">
+                      <Label :text="thing.name" class="h3 m-l-20" row="0" col="0" verticalAlignment="center" />
+                      <Switch v-model="thing.tak" row="0" col="1" class="m-r-20"/>
+                    </GridLayout>
+                  </v-template>
+                </ListView>
+            </GridLayout>
           </TabViewItem>
         </TabView>
       
